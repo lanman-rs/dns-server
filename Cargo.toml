@@ -1,0 +1,27 @@
+[package]
+name = "dns-server"
+version = "0.1.0"
+authors = ["Scarjit <scarjit@aol.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.14"
+
+[dependencies.simple_logger]
+git = "https://github.com/Scarjit/rust-simple_logger.git"
+branch = "master"
+
+[dependencies.trust-dns-resolver]
+version = "0.20.0"
+features = ["dns-over-https-rustls"]
+
+[dependencies.trust-dns-server]
+version = "0.20.0"
+
+[dependencies.reqwest]
+version = "0.11.0"
+
+[dependencies.lazy_static]
+version = "1.4.0"
